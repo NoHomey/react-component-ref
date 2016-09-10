@@ -84,7 +84,7 @@ class Before extends React.Component<any, any> {
       input.focus();
     }
     this.refInput = (input: HTMLInputElement): void => this.inputPass = input;
-    this.onChange = (event: React.FormEvent) => this.inputName.select();
+    this.onChange = (event: React.FormEvent): void => this.inputName.select();
   }
   
   render() {
