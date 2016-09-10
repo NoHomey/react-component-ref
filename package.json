@@ -1,0 +1,45 @@
+{
+  "name": "react-component-ref",
+  "version": "1.0.0",
+  "description": "Simple helper class to help you stay DRY (Don't repeat yourself)",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && jest",
+    "postinstall": "typings install",
+    "prepublish": "tsc -d -p .",
+    "clean": "rm -f ./src/index.js ./__tests__/*.d.ts ./__tests__/*.js ./fixtures/*.d.ts ./fixtures/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoHomey/react-component-ref.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "ref",
+    "helper",
+    "class",
+    "dry"
+  ],
+  "author": "Ivo Stratev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoHomey/react-component-ref/issues"
+  },
+  "homepage": "https://github.com/NoHomey/react-component-ref#readme",
+  "dependencies": {
+    "bind-decorator": "^1.0.3"
+  },
+  "devDependencies": {
+    "enzyme": "^2.4.1",
+    "jest": "^15.1.1",
+    "react": "^15.3.1",
+    "react-addons-test-utils": "^15.3.1",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.3"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage",
+    "collectCoverage": true
+  }
+}
