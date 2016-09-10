@@ -127,3 +127,24 @@ class After extends React.Component<any, any> {
   }
 }
 ```
+# Testing
+
+1. `npm install`
+
+2. `npm run typings`
+
+3. `npm test`
+
+# Contributing
+
+1. `npm install`
+
+2. `npm run typings`
+
+3. Make changes
+
+4. If necessary add some tests to `__tests__`
+
+5. `npm test`
+
+6. Make a Pull Request
