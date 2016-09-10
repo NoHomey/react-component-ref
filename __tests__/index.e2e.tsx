@@ -1,5 +1,5 @@
 import ComponentRef from './../src';
-import { TestComponent, TestProps } from './../fixtures/TestComponent';
+import { TestComponent, TestProps } from './../__fixtures__/TestComponent';
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 

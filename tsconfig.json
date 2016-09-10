@@ -10,7 +10,7 @@
     "files": [
         "src/index.ts",
         "typings/index.d.ts",
-        "fixtures/TestComponent.ts",
+        "__fixtures__/TestComponent.ts",
         "__tests__/index.spec.ts",
         "__tests__/index.e2e.tsx"
     ],

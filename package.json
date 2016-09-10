@@ -7,7 +7,7 @@
     "test": "tsc && jest",
     "postinstall": "typings install",
     "prepublish": "tsc -d -p .",
-    "clean": "rm -f ./src/index.js ./__tests__/*.d.ts ./__tests__/*.js ./fixtures/*.d.ts ./fixtures/*.js"
+    "clean": "rm -f ./src/index.js ./__tests__/*.d.ts ./__tests__/*.js ./__fixtures__/*.d.ts ./__fixtures__/*.js"
   },
   "repository": {
     "type": "git",

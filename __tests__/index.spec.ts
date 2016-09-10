@@ -1,5 +1,5 @@
 import ComponentRef from './../src';
-import TestComponent from './../fixtures/TestComponent';
+import TestComponent from './../__fixtures__/TestComponent';
 
 describe('ComponentRef', function () {
 
