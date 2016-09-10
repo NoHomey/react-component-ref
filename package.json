@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Simple helper class to help you stay DRY (Don't repeat yourself)",
   "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
     "test": "tsc && jest",
     "postinstall": "typings install",
-    "prepublish": "tsc -d -p .",
+    "prepublish": "tsc -d -p . && mv ./src/index.js . && mv ./src/index.d.ts .",
     "clean": "rm -f ./src/index.js ./__tests__/*.d.ts ./__tests__/*.js ./__fixtures__/*.d.ts ./__fixtures__/*.js"
   },
   "repository": {
