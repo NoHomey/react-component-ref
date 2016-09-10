@@ -10,7 +10,7 @@
         "src/index.ts",
         "typings/index.d.ts",
         "fixtures/TestComponent.ts",
-        "__tests__/ComponentRef-spec.ts"
+        "__tests__/ComponentRef.spec.ts"
     ],
     "exclude": [
         "node_modules"
