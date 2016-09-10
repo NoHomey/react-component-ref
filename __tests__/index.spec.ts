@@ -37,6 +37,14 @@ describe('ComponentRef', function () {
             expect(componentRef.getComponent().getCount()).toBe(9);
         });
 
+        it('should be this bound', function () {
+            const component: TestComponent = new TestComponent({ type: "test", count: 9 });
+            const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
+            const { ref } = componentRef;
+            ref(component);
+            expect(componentRef.getComponent()).toBe(component);
+        });
+
         it('dose not call onRef if ref is null', function () {
             const onRef: jest.Mock<TestComponent> = jest.fn<TestComponent>();
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>(onRef);

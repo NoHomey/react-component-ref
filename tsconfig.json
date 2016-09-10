@@ -4,13 +4,15 @@
         "target": "es5",
         "noImplicitAny": true,
         "sourceMap": false,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "jsx": "react"
     },
     "files": [
         "src/index.ts",
         "typings/index.d.ts",
         "fixtures/TestComponent.ts",
-        "__tests__/ComponentRef.spec.ts"
+        "__tests__/index.spec.ts",
+        "__tests__/index.e2e.tsx"
     ],
     "exclude": [
         "node_modules"
