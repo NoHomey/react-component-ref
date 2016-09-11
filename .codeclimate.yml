@@ -1,7 +1,12 @@
----
-engines:
-  fixme:
+--- 
+engines: 
+  fixme: 
     enabled: true
-ratings:
-  paths: []
-exclude_paths: []
+exclude_paths: 
+  - LICENSE
+  - README.md
+  - "*.json"
+  - __*/*
+ratings: 
+  paths: 
+    - src/*
