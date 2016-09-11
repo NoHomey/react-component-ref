@@ -4,6 +4,7 @@ __tests__
 coverage
 typings
 .vscode
+lcov.info
 tsconfig.json
 typings.json
 .gitignore
