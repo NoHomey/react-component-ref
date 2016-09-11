@@ -7,5 +7,6 @@ typings
 lcov.info
 tsconfig.json
 typings.json
+.codeclimate.yml
 .gitignore
 .npmignore
