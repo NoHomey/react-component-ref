@@ -38,7 +38,7 @@ describe('ComponentRef', function () {
         });
 
         it('should be this bound', function () {
-            const component: TestComponent = new TestComponent({ type: "test", count: 9 });
+            const component: TestComponent = new TestComponent({ });
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
             const { ref } = componentRef;
             ref(component);
@@ -53,11 +53,22 @@ describe('ComponentRef', function () {
         });
 
         it('calls onRef if ref is not null', function () {
-            const component: TestComponent = new TestComponent({ type: "test", count: 9 });
+            const component: TestComponent = new TestComponent({ });
             const onRef: jest.Mock<TestComponent> = jest.fn<TestComponent>();
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>(onRef);
             componentRef.ref(component);
             expect(onRef).toBeCalledWith(component);
+        });
+
+        it('gets null if component ref is garbage collected', function () {
+            let component: TestComponent = new TestComponent({ });
+            const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
+            componentRef.ref(component);
+            expect(componentRef.getComponent()).toBe(component);
+            component = null;
+            componentRef.ref(component);
+            expect(component).toBe(null);
+            expect(componentRef.getComponent()).toBe(null);
         });
     });
 });

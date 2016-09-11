@@ -2,6 +2,8 @@
 
 Simple helper class to help you stay DRY (Don't repeat yourself)
 
+[![npm version](https://badge.fury.io/js/react-component-ref.svg)](https://badge.fury.io/js/react-component-ref)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/NoHomey/react-component-ref)
 [![Build Status](https://semaphoreci.com/api/v1/nohomey/react-component-ref/branches/master/badge.svg)](https://semaphoreci.com/nohomey/react-component-ref)
 [![Code Climate](https://codeclimate.com/github/NoHomey/react-component-ref/badges/gpa.svg)](https://codeclimate.com/github/NoHomey/react-component-ref)
 [![Test Coverage](https://codeclimate.com/github/NoHomey/react-component-ref/badges/coverage.svg)](https://codeclimate.com/github/NoHomey/react-component-ref/coverage)
@@ -11,7 +13,7 @@ Simple helper class to help you stay DRY (Don't repeat yourself)
 
 # Install
 
-[![NPM](https://nodei.co/npm/react-component-ref.png?downloads=true&stars=true)](https://nodei.co/npm/react-component-ref/)
+[![NPM](https://nodei.co/npm/react-component-ref.png?downloads=true&stars=true)](https://www.npmjs.com/package/react-component-ref)
 
 # Usage
 

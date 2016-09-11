@@ -13,6 +13,15 @@ describe('ComponentRef', function () {
         expect(componentRef.getComponent().getCount()).toBe(1);
     });
 
+    it('Should call ref with null when unmounting component', function () {
+        const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
+        const wrapper: ShallowWrapper<TestProps, void> = shallow<TestProps, void>(<TestComponent />);
+        componentRef.ref(wrapper.instance() as TestComponent);
+        expect(componentRef.getComponent()).toBe(wrapper.instance());
+        componentRef.ref(wrapper.unmount().instance() as TestComponent);
+        expect(componentRef.getComponent()).toBe(null);
+    });
+
     it("should help you stay DRY", function () {
         const componentRef1: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
         const wrapper1: ShallowWrapper<TestProps, void> = shallow<TestProps, void>(<TestComponent type="e2e" count={1} />);

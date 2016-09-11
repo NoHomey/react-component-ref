@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 export interface TestProps {
-    type: string;
-    count: number;
+    type?: string;
+    count?: number;
 }
 
 export class TestComponent extends React.Component<TestProps, void> {
