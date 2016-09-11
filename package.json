@@ -1,6 +1,6 @@
 {
   "name": "react-component-ref",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple helper class to help you stay DRY (Don't repeat yourself)",
   "main": "index.js",
   "typings": "index.d.ts",
