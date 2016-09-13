@@ -1,16 +1,14 @@
 import ComponentRef from './../src';
 import TestComponent from './../__fixtures__/TestComponent';
 
-describe('ComponentRef', function () {
-
-    describe('constructor', function () {
-
-        it('creates new ComponentRef', function () {
+describe('ComponentRef', () => {
+    describe('constructor', () => {
+        it('creates new ComponentRef', () => {
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
             expect(componentRef instanceof ComponentRef).toBeTruthy();
         });
 
-        it('creates new ComponentRef and stores callback to call when non null ref is obtained', function () {
+        it('creates new ComponentRef and stores callback to call when non null ref is obtained', () => {
             const onRef: jest.Mock<TestComponent> = jest.fn<TestComponent>();
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>(onRef);
             expect(componentRef instanceof ComponentRef).toBeTruthy();
@@ -18,17 +16,15 @@ describe('ComponentRef', function () {
         });
     });
 
-    describe('getComponent', function () {
-
-        it('should return null when ref is not obtained', function () {
+    describe('getComponent', () => {
+        it('should return null when ref is not obtained', () => {
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
-            expect(componentRef.getComponent()).toBe(null);
+            expect(componentRef.getComponent()).toBeNull();
         });
     });
 
-    describe('ref', function () {
-
-        it('sets component ref', function () {
+    describe('ref', () => {
+        it('sets component ref', () => {
             const component: TestComponent = new TestComponent({ type: "test", count: 9 });
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
             componentRef.ref(component);
@@ -37,7 +33,7 @@ describe('ComponentRef', function () {
             expect(componentRef.getComponent().getCount()).toBe(9);
         });
 
-        it('should be this bound', function () {
+        it('should be this bound', () => {
             const component: TestComponent = new TestComponent({ });
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
             const { ref } = componentRef;
@@ -45,14 +41,14 @@ describe('ComponentRef', function () {
             expect(componentRef.getComponent()).toBe(component);
         });
 
-        it('dose not call onRef if ref is null', function () {
+        it('dose not call onRef if ref is null', () => {
             const onRef: jest.Mock<TestComponent> = jest.fn<TestComponent>();
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>(onRef);
             componentRef.ref(null);
             expect(onRef).not.toBeCalled();
         });
 
-        it('calls onRef if ref is not null', function () {
+        it('calls onRef if ref is not null', () => {
             const component: TestComponent = new TestComponent({ });
             const onRef: jest.Mock<TestComponent> = jest.fn<TestComponent>();
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>(onRef);
@@ -60,15 +56,15 @@ describe('ComponentRef', function () {
             expect(onRef).toBeCalledWith(component);
         });
 
-        it('gets null if component ref is garbage collected', function () {
+        it('gets null if component ref is garbage collected', () => {
             let component: TestComponent = new TestComponent({ });
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
             componentRef.ref(component);
             expect(componentRef.getComponent()).toBe(component);
             component = null;
             componentRef.ref(component);
-            expect(component).toBe(null);
-            expect(componentRef.getComponent()).toBe(null);
+            expect(component).toBeNull();
+            expect(componentRef.getComponent()).toBeNull();
         });
     });
 });
