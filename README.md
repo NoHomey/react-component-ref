@@ -118,8 +118,8 @@ class After extends React.Component<any, any> {
   
   public constructor(props: any) {
     super(props);
-    this.inputName = new ComponentRef((input: HTMLInputElement) => input.focus());
-    this.inputPass = new ComponentRef();
+    this.inputName = new ComponentRef<HTMLInputElement>((input: HTMLInputElement) => input.focus());
+    this.inputPass = new ComponentRef<HTMLInputElement>();
   }
   
   public render(): JSX.Element {
