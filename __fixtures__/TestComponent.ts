@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Nullable } from './../src';
 
 export interface TestProps {
     type?: string;
@@ -11,14 +12,14 @@ export class TestComponent extends React.Component<TestProps, void> {
     }
 
     public getType(): string {
-        return this.props.type;
+        return this.props.type!;
     }
 
     public getCount(): number {
-        return this.props.count;
+        return this.props.count!;
     }
 
-    public render(): JSX.Element {
+    public render(): Nullable<JSX.Element> {
         return null;
     }
 }

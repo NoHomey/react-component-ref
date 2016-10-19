@@ -1,4 +1,4 @@
-import ComponentRef from './../src';
+import { ComponentRef, Nullable } from './../src';
 import TestComponent from './../__fixtures__/TestComponent';
 
 describe('ComponentRef', () => {
@@ -57,7 +57,7 @@ describe('ComponentRef', () => {
         });
 
         it('gets null if component ref is garbage collected', () => {
-            let component: TestComponent = new TestComponent({ });
+            let component: Nullable<TestComponent> = new TestComponent({ });
             const componentRef: ComponentRef<TestComponent> = new ComponentRef<TestComponent>();
             componentRef.ref(component);
             expect(componentRef.getComponent()).toBe(component);

@@ -8,10 +8,18 @@ Simple helper class to help you stay DRY (Don't repeat yourself)
 [![Code Climate](https://codeclimate.com/github/NoHomey/react-component-ref/badges/gpa.svg)](https://codeclimate.com/github/NoHomey/react-component-ref)
 [![Test Coverage](https://codeclimate.com/github/NoHomey/react-component-ref/badges/coverage.svg)](https://codeclimate.com/github/NoHomey/react-component-ref/coverage)
 [![Issue Count](https://codeclimate.com/github/NoHomey/react-component-ref/badges/issue_count.svg)](https://codeclimate.com/github/NoHomey/react-component-ref)
+![TypeScript](https://img.shields.io/badge/%3C%20%2F%3E-TypeScript-blue.svg)
+![Typings](https://img.shields.io/badge/typings-%E2%9C%93-brightgreen.svg)
 
 `ComponentRef` is a small helper `class` which should help you stay as much DRY as possible and encourage you to add `ref`s to your react `Components` when it's necessary (when you need it or a third party library needs access to native element). (see [Refs to Components](https://facebook.github.io/react/docs/more-about-refs.html) if you haven't already)
 
 # Install
+
+Install with npm:
+
+```bash
+$ npm install react-component-ref
+```
 
 [![NPM](https://nodei.co/npm/react-component-ref.png?downloads=true&stars=true)](https://www.npmjs.com/package/react-component-ref)
 
@@ -136,20 +144,16 @@ class After extends React.Component<any, any> {
 
 1. `npm install`
 
-2. `npm run typings`
-
-3. `npm test`
+2. `npm test`
 
 # Contributing
 
 1. `npm install`
 
-2. `npm run typings`
+2. Make changes
 
-3. Make changes
+3. If necessary add some tests to `__tests__`
 
-4. If necessary add some tests to `__tests__`
+4. `npm test`
 
-5. `npm test`
-
-6. Make a Pull Request
+5. Make a Pull Request
